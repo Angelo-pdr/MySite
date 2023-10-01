@@ -6,6 +6,6 @@ from blog.factories import PostFactory
 def post_published():
     return PostFactory(title="pytest with factory")
 
-@pytest.mak.django_db
+@pytest.mark.django_db
 def test_create_publised_post(post_published):
     assert post_published.title == "pytest with factory"
